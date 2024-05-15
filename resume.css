@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;      
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100dvh;
+}
+header {
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: darkblue;
+}
+header h1 {
+  text-transform: uppercase;
+}
+header h2 {
+  margin-top: 1rem;
+  font-style: italic;       
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:    
+  "work-proj"
+  "con-ed"
+  ;
+  align-items: start;
+  justify-content: center;
+  /* gap: 1rem; */
+}
+ul {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.con-ed-div, 
+.work-proj-div,
+.work-exp,
+.projects-exp, 
+.skills,
+.education,
+.certificate,
+.contact
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.con-ed-div {
+  grid-area: con-ed;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+.work-proj-div {
+  grid-area: work-proj;
+}
+.work-proj-div ul { 
+  padding: 2rem; 
+}
+.work-exp,
+.projects-exp
+{
+  gap: 1rem;
+}
+@media (min-width:768px) {
+  main {
+    width: 100%;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: "con-ed work-proj";
+  }
+  .work-proj-div {
+    /* height: 100%; */
+  }
+  .con-ed-div {
+    flex-direction: column-reverse;
+    justify-content: end;
+    /* gap: 1rem; */
+  }
+
+  
+}
